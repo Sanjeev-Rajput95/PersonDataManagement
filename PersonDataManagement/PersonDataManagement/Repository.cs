@@ -43,5 +43,18 @@ namespace PersonDataManagement
             double average = objListOfPersonsInCity.Average(e => e.Age);
             Console.WriteLine($"\nAverage age in the list: {average}");
         }
+
+        public void SpecificName_PresentOrNot(List<Person> objListOfPersonsInCity, string nameSearch)
+        {
+
+            if (objListOfPersonsInCity.Any(e => e.Name == nameSearch))
+            {
+                Console.WriteLine($"\nYes, {nameSearch} exist in the list");
+            }
+            else
+            {
+                Console.WriteLine($"\nNo, {nameSearch} does not exist in the list");
+            }
+        }
     }
 }
