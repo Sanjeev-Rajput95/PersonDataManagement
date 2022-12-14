@@ -64,5 +64,19 @@ namespace PersonDataManagement
                 Console.WriteLine($"\nName: {person.Name} \nAge: {person.Age}");
             }
         }
+
+        public void RemoveSpecificName(List<Person> objListOfPersonsInCity, string nameSearch)
+        {
+            var found = objListOfPersonsInCity.Find(e => e.Name == nameSearch);
+            if (found != null)
+            {
+                objListOfPersonsInCity.Remove(found);
+                Console.WriteLine($"\n{nameSearch} removed successfully from the list");
+            }
+            else
+            {
+                Console.WriteLine($"\n{nameSearch} does not exist in the list");
+            }
+        }
     }
 }
