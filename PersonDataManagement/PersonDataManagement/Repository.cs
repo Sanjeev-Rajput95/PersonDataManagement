@@ -17,5 +17,13 @@ namespace PersonDataManagement
             objListOfPersonsInCity.Add(new Person("203456880", "Sue", "32 Cranbrook Rd, Newyork, NY", 55));
             objListOfPersonsInCity.Add(new Person("203456881", "Winston", "126 Province Ave, Newyork, NY", 65));
         }
+
+        public void Retrieving_TopTwoRecords_ForAgeLessThanSixty(List<Person> objListOfPersonsInCity)
+        {
+            foreach (var person in objListOfPersonsInCity.FindAll(e => (e.Age < 60)).Take(2).ToList())
+            {
+                Console.WriteLine($"\nName: {person.Name} \nAge: {person.Age}");
+            }
+        }
     }
 }
