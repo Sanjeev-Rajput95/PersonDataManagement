@@ -11,7 +11,7 @@
             objRep.AddRecords(objListOfPersonsInCity);
             objRep.Retrieving_TopTwoRecords_ForAgeLessThanSixty(objListOfPersonsInCity);
             objRep.Retrieving_Records_ForAgeBetween13to18(objListOfPersonsInCity);
-
+            objRep.AverageAge(objListOfPersonsInCity);
         }
     }
 }

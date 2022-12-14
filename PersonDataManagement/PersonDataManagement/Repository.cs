@@ -37,5 +37,11 @@ namespace PersonDataManagement
                 Console.WriteLine("\nNo, we do not have any teenages in this list");
             }
         }
+
+        public void AverageAge(List<Person> objListOfPersonsInCity)
+        {
+            double average = objListOfPersonsInCity.Average(e => e.Age);
+            Console.WriteLine($"\nAverage age in the list: {average}");
+        }
     }
 }
