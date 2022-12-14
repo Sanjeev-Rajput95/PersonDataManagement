@@ -56,5 +56,13 @@ namespace PersonDataManagement
                 Console.WriteLine($"\nNo, {nameSearch} does not exist in the list");
             }
         }
+
+        public void SkipAgeLessThanSixty(List<Person> objListOfPersonsInCity)
+        {
+            foreach (var person in objListOfPersonsInCity.FindAll(e => (e.Age >= 60)).ToList())
+            {
+                Console.WriteLine($"\nName: {person.Name} \nAge: {person.Age}");
+            }
+        }
     }
 }

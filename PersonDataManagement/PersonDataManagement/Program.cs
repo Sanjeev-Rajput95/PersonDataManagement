@@ -13,6 +13,7 @@
             objRep.Retrieving_Records_ForAgeBetween13to18(objListOfPersonsInCity);
             objRep.AverageAge(objListOfPersonsInCity);
             objRep.SpecificName_PresentOrNot(objListOfPersonsInCity, "John");
+            objRep.SkipAgeLessThanSixty(objListOfPersonsInCity);
         }
     }
 }
